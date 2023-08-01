@@ -43,6 +43,10 @@ body{
 
 }
 
+.item-info {
+  max-width: 600px;
+}
+
 #container img{
 
     flex: 0 0 auto; 

@@ -18,10 +18,12 @@
             @foreach ($items as $item)
                 <div class="item">
                     <img src="/img/events/{{ $item->image }}">
-                    <p>{{ $item->preco }}</p>
+                    <p>R${{ $item->preco }} </p>
                     {{-- <a href="{{ route('items.edit', ['item' => $item->id]) }}">Edit</a> --}}
-                    <p> {{ $item->description }}</p>
                     <p>{{ $item->name }} </p>
+                    <p> {{ $item->description }}</p>
+                    
+                    
                      <p>  <a href="{{ route('items.show', ['id' => $item->id]) }}">Ver Produto</a> </p>
                 </div>
             @endforeach

@@ -35,6 +35,12 @@
                 <x-input id="contato" class="block mt-1 w-full"  name="contato" required autocomplete="contato"/>
             </div>
 
+
+            <div class="div mt4">
+                <x-label for="endereco">Endereço </x-label>
+                <x-input id="endereco" class="block mt-1 w-full"  name="endereco" required autocomplete="endereco"/>
+            </div>
+
             @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
                 <div class="mt-4">
                     <x-label for="terms">

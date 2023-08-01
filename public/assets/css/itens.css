@@ -96,12 +96,15 @@ nav a:hover {
 }
 
 .item {
-    max-width: 200px; 
+    max-width: 210px; 
     padding: 15px;
-    margin: 10px; 
+    margin: 20px; 
     border: 1px solid #ccc; 
     text-align: center; 
-    box-sizing: border-box
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .item img {

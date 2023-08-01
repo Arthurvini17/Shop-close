@@ -13,6 +13,7 @@
                 <p class="item-name">Preço  {{ $item->preco }} <p></p>
                 <p>{{ $item->grande ? 'O item é grande' : 'O item é pequeno' }}</p>
                 <p>Descrição: {{ $item->description }}</p>
+                <p>Endereço: {{$eventOwner['endereco']}}</p>
                 <p>Contato: {{$eventOwner['contato']}}</p>
                 {{-- <form action="{{route('items.destroy',['item' => $item->id]) }}" method="POST">
         @csrf
