@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Item;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class ItemController extends Controller
 {
@@ -58,6 +59,8 @@ class ItemController extends Controller
             $item->image = $imagename;
         }
     
+        $user = auth()->user();
+        $item->user_id = $user->id;
         $item->save();
     
         return redirect()->route('items.index')->with('message', 'Criado com sucesso');
@@ -84,10 +87,15 @@ class ItemController extends Controller
       return redirect()->route('items.index');
     }
 
-    public function show(Item $item)
-    {
-        return view('item_show', ['item' => $item]);
-    }
+    public function show($id)
+{
+    $item = Item::findOrFail($id);
+
+    $eventOwner = User::where('id', $item->user_id)->first()->toArray();
+
+    return view('item_show', ['item' => $item, 'eventOwner' => $eventOwner]);
+}
+
 
     public function destroy(string $id)
     {

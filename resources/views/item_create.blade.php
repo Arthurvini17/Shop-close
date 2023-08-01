@@ -11,10 +11,11 @@
 
     <form action="{{ route('items.store')}}" method="post" enctype="multipart/form-data">
         @csrf
+        <label for="image" name="image">Envie a foto do seu produto</label>
         <input type="file" name="image">
         <input type="text" name="name" placeholder="Nome do produto">
         <input type="number" name="preco" placeholder="Digite o preço do produto">
-        <label for="image" name="image">Envie a foto do seu produto</label>
+       
         
         <input type="text" name="marca" placeholder="Marca do produto">
         <label for="grande">O item é grande?</label>

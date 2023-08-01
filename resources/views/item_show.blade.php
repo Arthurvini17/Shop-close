@@ -9,9 +9,11 @@
             </div>
             <div class="item-info">
                 <h2>{{ ucfirst($item->name ) }} </h2>
+                <p>{{ ucfirst($eventOwner['name'])}}</p>
                 <p class="item-name">Preço  {{ $item->preco }} <p></p>
                 <p>{{ $item->grande ? 'O item é grande' : 'O item é pequeno' }}</p>
                 <p>Descrição: {{ $item->description }}</p>
+                <p>Contato: {{$eventOwner['contato']}}</p>
                 {{-- <form action="{{route('items.destroy',['item' => $item->id]) }}" method="POST">
         @csrf
         <input type="hidden" name="_method" value="DELETE">

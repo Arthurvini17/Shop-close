@@ -3,7 +3,7 @@
         <x-slot name="logo">
             <x-authentication-card-logo />
         </x-slot>
-
+        <link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
         <x-validation-errors class="mb-4" />
 
         @if (session('status'))

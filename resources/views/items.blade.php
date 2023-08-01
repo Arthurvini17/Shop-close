@@ -20,8 +20,9 @@
                     <img src="/img/events/{{ $item->image }}">
                     <p>{{ $item->preco }}</p>
                     {{-- <a href="{{ route('items.edit', ['item' => $item->id]) }}">Edit</a> --}}
-                    <p>Descrição do item: {{ $item->description }}</p>
-                    <p>{{ $item->name }} <a href="{{ route('items.show', ['item' => $item->id]) }}">Ver Produto</a> </p>
+                    <p> {{ $item->description }}</p>
+                    <p>{{ $item->name }} </p>
+                     <p>  <a href="{{ route('items.show', ['id' => $item->id]) }}">Ver Produto</a> </p>
                 </div>
             @endforeach
         </div>
