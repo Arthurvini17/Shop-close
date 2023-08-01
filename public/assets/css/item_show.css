@@ -16,13 +16,40 @@ body{
     justify-content: center;
     display: flex;
     text-align: center;
+   margin-top: 100px;
+  
+    
+  
+}
+
+.all p {
+    margin-bottom: 10px;
+    margin: 0;
+    font-weight: bolder;
+    
+   
+}
+
+.item-name {
+    color: black;
+    font-weight: bolder;
+}
+
+
+
+.all {
+    display: flex;
+    gap: 100px;
+
 }
 
 #container img{
 
-  
-   width: 300px;
- 
-   
+    flex: 0 0 auto; 
+    margin-right: 100px;
+    max-width: 300px;
+    display: block;
+    height: auto;
+    
 }
 

@@ -16,6 +16,8 @@ return new class extends Migration
             $table->decimal('preco', 10, 2)->nullable();
             $table->string('image')->nullable();
             $table->string('nomedono')->nullable();
+            $table->string('marca');
+            $table->boolean('grande');
             
         });
     }

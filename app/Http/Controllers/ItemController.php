@@ -46,6 +46,8 @@ class ItemController extends Controller
         $item->description = $request->input('description');
         $item->preco = $request->input('preco');
         $item->image = $request->input('image');
+        $item->marca = $request->input('marca');
+        $item->grande = $request->input('grande');
     
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
             $requestImage = $request->image;

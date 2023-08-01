@@ -12,10 +12,9 @@
     <header>
         <nav>
             <ul>
-                <li>Anunciar item </li>
                 <li>Registrar</li>
                 <li>Logar</li>
-                <li>Pagina inicial</li>
+                <li> <a href="{{route('items.index')}}"> Pagina inicial</a></li>
                 <li><a href="{{ route('items.create') }}">Anuncie aqui</a></li>
             </ul>
         </nav>
@@ -25,7 +24,7 @@
         @yield('content')
     
         <footer>
-            <h1>Shop Close &copy;</h1>
+            <h1>Shop <span>Close  &copy </span></h1>
         </footer>
 </body>
 </html>
