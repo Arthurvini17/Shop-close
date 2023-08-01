@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ItemController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,4 +23,8 @@ Route::get('/items/{item}', [ItemController::class,'show'])->name('items.show');
 Route::get('/items{item}/edit', [ItemController::class, 'edit'])->name('items.edit');
 Route::put('/items{item}', [ItemController::class, 'update'])->name('items.update');
 Route::delete('/items/{item}',[ItemController::class, 'destroy'])->name('items.destroy');
+Route::post('/logout', [ItemController::class, 'logout'])->name('logout');
 
+
+Route::get('/register', [ItemController::class, 'register'])->name('register');
+Route::get('/login', [ItemController::class, 'login'])->name('login');

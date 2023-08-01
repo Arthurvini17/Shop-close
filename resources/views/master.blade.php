@@ -12,10 +12,25 @@
     <header>
         <nav>
             <ul>
-                <li>Registrar</li>
-                <li>Logar</li>
+
+                @guest
+                <li> <a href="{{ route('register') }}">Registrar</a></li>
+                <li><a href="{{route('login')}}">Logar</a></li>
+                @endguest 
+
                 <li> <a href="{{route('items.index')}}"> Pagina inicial</a></li>
+                @auth
                 <li><a href="{{ route('items.create') }}">Anuncie aqui</a></li>
+                <li>
+
+                    <form action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">
+                            Sair
+                        </a>
+                    </form>
+                </li>
+                @endauth
             </ul>
         </nav>
     </header>

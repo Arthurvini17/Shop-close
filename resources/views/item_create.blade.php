@@ -23,7 +23,7 @@
             <option value="1">Sim</option>
         </select>
        
-        <textarea name="description" placeholder="fale sobre seu item">{{ old('description', 'Descrição padrão')}}</textarea>
+        <textarea name="description" maxlength="200" placeholder="fale sobre seu item">{{ old('description', 'Descrição padrão')}}</textarea>
         <button type="submit">Enviar</button>
     </form>
 </section>

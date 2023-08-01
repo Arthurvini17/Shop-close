@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Item;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
 
 class ItemController extends Controller
 {
@@ -68,8 +69,20 @@ class ItemController extends Controller
 
 
 
-    
+    public function login(){
+      return view('login');
+    }
 
+    public function register(){
+      return view('register');
+    }
+
+    public function logout()
+    {
+      Auth::logout();
+
+      return redirect()->route('items.index');
+    }
 
     public function show(Item $item)
     {
