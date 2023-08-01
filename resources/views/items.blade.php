@@ -1,16 +1,39 @@
 @extends('master')
 @section('content')
+@section('title', 'Itens da loja')
+<link rel="stylesheet" href="{{ asset('assets/css/itens.css')}}">
+<div class="container">
+    <div class="itens">
+        <div class="search-container">
+            <form action="/items" method="GET">
+                <input type="search" name="search" placeholder="O que está procurando?">
+            </form>
+        </div>
+
+        @if ($search)
+            <h2>Buscando por: {{ $search }}</h2>
+        @endif
+        <h2>Items</h2>
+        <div class="item-grid">
+            @foreach ($items as $item)
+                <div class="item">
+                    <img src="/img/events/{{ $item->image }}">
+                    <p>{{ $item->preco }}</p>
+                    {{-- <a href="{{ route('items.edit', ['item' => $item->id]) }}">Edit</a> --}}
+                    <p>Descrição do item: {{ $item->description }}</p>
+                    <p>{{ $item->name }} <a href="{{ route('items.show', ['item' => $item->id]) }}">Ver Produto</a> </p>
+                </div>
+            @endforeach
+        </div>
+        <div class="search-sub">
 
 
-<a href="{{route('items.create')}}">Create</a>
-    <h2>items/h2>
-    <ul>
-        @foreach ($items as $item)
-        <li>{{$item->name}} <a href="{{ route('items.edit', ['item' => $item->id]) }}">Edit</a>  <a href="{{ route('items.show', ['item'=> $item->id]) }}">Show</a>
-
-        </li>
-        <img src="/img/events/{{$item->image}}">
-        @endforeach
-    </ul>
-    
+            @if (count($items) == 0 && $search)
+                <p>Não há itens disponíveis com essa busca <a href="/items">Ver todos</a></p>
+            @elseif(count($items) == 0)
+                <p>Não há itens disponíveis</p>
+            @endif
+        </div>
+    </div>
+</div>
 @endsection

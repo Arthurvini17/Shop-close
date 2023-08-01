@@ -18,8 +18,17 @@ class ItemController extends Controller
   
     public function index()
     {
+      $search = request('search');
+
+      if($search){
+        $items = Item::where([
+          ['name', 'like', '%' . $search. '%']
+        ])->get();
+      } else{
         $items = $this->item->all();
-        return view('items', ['items' => $items]);
+      }
+       
+        return view('items',['items' => $items, 'search' => $search]);
     }
     
     public function create()

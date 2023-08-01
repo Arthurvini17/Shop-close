@@ -2,8 +2,9 @@
 @section('content')
 
 
-    <h2>Create</h2>
 
+<div class="container">
+    <h2>Create</h2>
     @if(session()->has('message'))
     {{ session()->get('message')}}
     @endif
@@ -19,4 +20,8 @@
        
         <button type="submit">Enviar</button>
     </form>
+</div>
+   
+
+ 
 @endsection
