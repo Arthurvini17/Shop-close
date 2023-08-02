@@ -4,10 +4,12 @@
 <link rel="stylesheet" href="{{ asset('assets/css/itens.css')}}">
 <div class="container">
     <div class="itens">
-        <div class="search-container">
+        <div class="search">
             <form action="/items" method="GET">
-                <input type="search" name="search" placeholder="O que está procurando?">
-            </form>
+            <input type="search" class="search__input" placeholder="O que esta procurando?" name="search">
+            <button class="search__button">
+            </button>
+        </form>
         </div>
 
         @if ($search)

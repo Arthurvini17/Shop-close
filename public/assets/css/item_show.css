@@ -44,7 +44,19 @@ body{
 }
 
 .item-info {
-  max-width: 600px;
+ 
+  margin-bottom: 100px;
+  
+}
+
+.item-info h2,
+.item-info p {
+   margin-bottom: 10px;
+}
+
+.item-info a {
+   font-weight: 900;
+    color: black;
 }
 
 #container img{

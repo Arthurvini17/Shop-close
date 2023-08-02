@@ -6,57 +6,39 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body{
-    
-    height: 100vh;
-}
-
-#create {
+.container {
     align-items: center;
     justify-content: center;
-    display: flex;
-    flex-direction: column;
-    margin-top: 100px;
-    
+   display: flex;
+}
+
+.image-container img{
+    width: 30px;
+    position: absolute;
+    margin-left: -300px;
+    margin-top: 300px;
     
 }
 
-#create form  {
-    flex-direction: column;
+.image-container {
+    width: 100%;
+    text-align: center;
+   
+}
+
+.form-container {
     align-items: center;
-    justify-content: center;
     display: flex;
-    font-family: 'Poppins';
-    font-weight: bolder;
-    font-weight:800;
-    
-    
+    justify-content: center;
+    flex-direction: column;
 }
 
-#create form input {
+.form-container input {
     margin: 1em 0 1em 0;
- 
- 
-  padding: 0.8em;
-  outline: none;
-  border: 2px solid rgb(200, 200, 200);
-  background-color: transparent;
-  border-radius: 20px;
-  width: 100%;
-}
-
-#create form label {
-    font-size: 100%;
-    left: 0;
     padding: 0.8em;
-    margin-left: 0.5em;
-    pointer-events: none;
-    transition: all 0.3s ease;
-    color: rgb(100, 100, 100);
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 20px;
+    width: 100%;
 }
-
-#create form input:hover{
-    border-color: rgb(150, 150, 200);
-}
-
-

@@ -14,7 +14,7 @@
             <ul>
                 <li>
                     @if (auth()->check())
-                    <p>olá {{ auth()->user()->name }}</p>
+                    <p>olá {{ ucfirst (auth()->user()->name) }}</p>
                 @else
                 
                 @guest

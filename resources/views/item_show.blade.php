@@ -9,14 +9,14 @@
             </div>
             <div class="item-info">
                 <h2>{{ ucfirst($item->name ) }} </h2>
-                <p>{{ ucfirst($eventOwner['name'])}}</p>
+                <p>Quem anunciou:{{ ucfirst($eventOwner['name'])}}</p>
                 <p class="item-name">Preço  {{ $item->preco }} <p></p>
                 <p>{{ $item->grande ? 'O item é grande' : 'O item é pequeno' }}</p>
                 <p>Descrição: {{ $item->description }}</p>
                 <p>Endereço: {{$eventOwner['endereco']}}</p>
                 <p>Contato: {{$eventOwner['contato']}}</p>
          
-                <a href="{{ route('items.index') }}">voltar</a>
+                <a href="{{ route('items.index') }}">Voltar</a>
             </div>
         </div>
     </section>
