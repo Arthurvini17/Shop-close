@@ -12,16 +12,26 @@
     <header>
         <nav>
             <ul>
-
+                <li>
+                    @if (auth()->check())
+                    <p>olá {{ auth()->user()->name }}</p>
+                @else
+                
                 @guest
+              
                 <li> <a href="{{ route('register') }}">Registrar</a></li>
                 <li><a href="{{route('login')}}">Logar</a></li>
                 @endguest 
+                @endif
+
+               
 
                 <li> <a href="{{route('items.index')}}"> Pagina inicial</a></li>
                 @auth
                 <li><a href="{{ route('items.create') }}">Anuncie aqui</a></li>
 
+               
+                </li>
                 <li><a href="{{route('dashboard')}}">Meus itens</a></li>
                 <li>
 
