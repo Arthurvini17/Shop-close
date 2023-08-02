@@ -19,7 +19,7 @@
                 <div class="item">
                     <img src="/img/events/{{ $item->image }}">
                     <p>R${{ $item->preco }} </p>
-                    {{-- <a href="{{ route('items.edit', ['item' => $item->id]) }}">Edit</a> --}}
+                   
                     <p>{{ $item->name }} </p>
                     <p> {{ $item->description }}</p>
                     

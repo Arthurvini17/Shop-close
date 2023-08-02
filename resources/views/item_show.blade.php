@@ -15,11 +15,7 @@
                 <p>Descrição: {{ $item->description }}</p>
                 <p>Endereço: {{$eventOwner['endereco']}}</p>
                 <p>Contato: {{$eventOwner['contato']}}</p>
-                {{-- <form action="{{route('items.destroy',['item' => $item->id]) }}" method="POST">
-        @csrf
-        <input type="hidden" name="_method" value="DELETE">
-        <button type="submit">Delete</button>
-    </form> --}}
+         
                 <a href="{{ route('items.index') }}">voltar</a>
             </div>
         </div>

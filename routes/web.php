@@ -20,9 +20,9 @@ Route::get('/items', [ItemController::class, 'index'])->name('items.index');
 Route::get('/items/create', [ItemController::class, 'create'])->name('items.create')->middleware('auth');
 Route::post('/items',[ItemController::class,'store'])->name('items.store');
 Route::get('/items/{id}', [ItemController::class,'show'])->name('items.show');
-Route::get('/items{item}/edit', [ItemController::class, 'edit'])->name('items.edit');
-Route::put('/items{item}', [ItemController::class, 'update'])->name('items.update');
-Route::delete('/items/{item}',[ItemController::class, 'destroy'])->name('items.destroy');
+Route::get('/items/{id}/edit', [ItemController::class, 'edit'])->name('items.edit')->middleware('auth');
+Route::put('/items{id}', [ItemController::class, 'update'])->name('items.update')->middleware('auth');
+Route::delete('/items/{item}',[ItemController::class, 'destroy'])->name('items.destroy')->middleware('auth');
 Route::post('/logout', [ItemController::class, 'logout'])->name('logout');
 Route::get('/dashboard', [ItemController::class, 'dashboard'])->name('dashboard')->middleware('auth');
 

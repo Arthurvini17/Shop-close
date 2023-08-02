@@ -7,6 +7,7 @@ use App\Models\Item;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 class ItemController extends Controller
 {
@@ -56,6 +57,7 @@ class ItemController extends Controller
             $extension = $requestImage->extension();
             $imagename = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
             $requestImage->move(public_path('img/events'), $imagename);
+            
             $item->image = $imagename;
         }
     
@@ -68,8 +70,25 @@ class ItemController extends Controller
     
 
    
+    public function edit($id){
+      
+      $item = Item::findOrFail($id);
 
+      return view('item_edit', ['item'=> $item]);
+    }
 
+    public function update(Request $request){
+
+      Item::findOrFail($request->id)->update($request->all());
+
+      return view('dashboard');
+    }
+
+    public function destroy(string $id)
+    {
+      $this->item->where('id', $id)->delete();
+      return redirect()->route('items.index');
+    }
 
 
     public function login(){
@@ -97,12 +116,7 @@ class ItemController extends Controller
 }
 
 
-    public function destroy(string $id)
-    {
-      $this->item->where('id', $id)->delete();
-      return redirect()->route('items.index');
-    }
-
+   
 
     public function dashboard(){
 
