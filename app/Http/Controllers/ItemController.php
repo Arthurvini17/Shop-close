@@ -102,4 +102,14 @@ class ItemController extends Controller
       $this->item->where('id', $id)->delete();
       return redirect()->route('items.index');
     }
+
+
+    public function dashboard(){
+
+      $user = auth()->user();
+
+      $items = $user->items;
+
+      return view('dashboard', ['items' => $items]);
+    }
 }

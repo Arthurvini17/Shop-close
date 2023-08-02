@@ -21,6 +21,8 @@
                 <li> <a href="{{route('items.index')}}"> Pagina inicial</a></li>
                 @auth
                 <li><a href="{{ route('items.create') }}">Anuncie aqui</a></li>
+
+                <li><a href="{{route('dashboard')}}">Meus itens</a></li>
                 <li>
 
                     <form action="{{ route('logout') }}" method="POST">

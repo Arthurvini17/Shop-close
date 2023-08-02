@@ -1,15 +1,40 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot>
+<!-- View (dashboard.blade.php) -->
+@extends('master')
+@section('title', 'Meus itens')
+<link rel="stylesheet" href="{{ asset('assets/css/dashboard.css')}}">
+@section('content')
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-welcome />
-            </div>
-        </div>
-    </div>
-</x-app-layout>
+<h1>Dashboard</h1>
+
+@if(count($items) > 0)
+<div class="table-container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Item Name</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($items as $item)
+            <tr>
+                <td class="index">{{$loop->index + 1}}</td>
+                <td class="item-name"><a href="/items/{{$item->id}}">{{$item->name}}</a></td>
+                <td class="item-image">
+                    @if($item->image)
+                        <img src="/img/events/{{ $item->image }}" alt="Imagem do item {{$item->name}}" class="item-img">
+                    @else
+                        <span>No Image</span>
+                    @endif
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+</div>
+@else
+<p>Voce ainda nao tem eventos, <a href="{{ route('items.create') }}">Crie aqui</a></p>
+@endif
+@endsection
+

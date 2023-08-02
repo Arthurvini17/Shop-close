@@ -24,6 +24,7 @@ Route::get('/items{item}/edit', [ItemController::class, 'edit'])->name('items.ed
 Route::put('/items{item}', [ItemController::class, 'update'])->name('items.update');
 Route::delete('/items/{item}',[ItemController::class, 'destroy'])->name('items.destroy');
 Route::post('/logout', [ItemController::class, 'logout'])->name('logout');
+Route::get('/dashboard', [ItemController::class, 'dashboard'])->name('dashboard')->middleware('auth');
 
 
 Route::get('/register', [ItemController::class, 'register'])->name('register');
