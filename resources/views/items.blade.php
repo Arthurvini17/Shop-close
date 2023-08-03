@@ -15,7 +15,7 @@
         @if ($search)
             <h2>Buscando por: {{ $search }}</h2>
         @endif
-        <h2>Items</h2>
+        <h2>Itens</h2>
         <div class="item-grid">
             @foreach ($items as $item)
                 <div class="item">

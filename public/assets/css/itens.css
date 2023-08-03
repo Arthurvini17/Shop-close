@@ -52,7 +52,7 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-
+  
 }
 
 
@@ -71,7 +71,7 @@ nav a:hover {
   width: 300px;
   transition: all ease-in-out .5s;
   margin-right: -2rem;
-  margin-bottom: 100px
+ 
 }
 
 .search__input:hover,
@@ -110,7 +110,8 @@ nav a:hover {
   justify-content: center;
   display: flex;
   text-align: center;
-  color: red;
+  color: #353e48;;
+  font-weight: 900;
 }
 
 .item-grid {

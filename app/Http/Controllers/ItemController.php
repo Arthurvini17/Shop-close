@@ -25,7 +25,7 @@ class ItemController extends Controller
 
     if ($search) {
       $items = Item::where([
-        ['name', 'like', '%' . $search . '%']
+        ['name', 'like', '%' . $search . '%'],
       ])->get();
     } else {
       $items = $this->item->all();

@@ -50,8 +50,8 @@
   
         @yield('content')
     
-        <footer>
+        {{-- <footer>
             <h1>Shop <span>Close  &copy </span></h1>
-        </footer>
+        </footer> --}}
 </body>
 </html>

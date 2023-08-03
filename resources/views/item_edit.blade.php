@@ -3,8 +3,8 @@
 <link rel="stylesheet" href="{{ asset('assets/css/item_edit.css') }}">
 
 @section('content')
+<div class="container">
     <h2>Edite seu item: {{$item->name}}</h2>
-    <div class="container">
         <form action="{{ route('items.update', ['id' => $item->id]) }}" method="POST" enctype="multipart/form-data">
             @csrf
             <input type="hidden" name="_method" value="PUT">
@@ -25,8 +25,9 @@
                 </select>
                 <textarea name="description" maxlength="200">{{ old('description', $item->description) }}</textarea>
                 <button type="submit">Enviar</button>
+            </div>
         </form>
     </div>
-
-    </div>
+    
+            
 @endsection
