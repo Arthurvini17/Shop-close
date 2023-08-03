@@ -3,11 +3,11 @@
 <p>Um projeto desenvolvido em Laravel, Laravel Jetstream, mysql, html e css. Esse é um projeto de  E-comerce</p>
 
 <h3>Tecnologias usadas</h3>
-<li>Laravel:</li>
-<li>Laravel JetStream:</li>
-<li>MYSQL</li>
-<li>HTML</li>
-<li>CSS</li>
+<li>Laravel: framework PHP de código aberto que permite o desenvolvimento rápido e fácil de aplicativos web </li> <br>
+<li>Laravel JetStream:  pacote oficial do Laravel que oferece uma estrutura para autenticação e gerenciamento de equipes de usuário. Ele inclui recursos como autenticação por e-mail, autenticação de dois fatores, configurações de perfil, gerenciamento de sessão </li> <br>
+<li>MYSQL: sistema de gerenciamento de banco de dados relacional </li> <br>
+<li>HTML: Linguaguem de marcação </li> <br>
+<li>CSS: Linguaguem de estilização </li> <br>
 
 <h1>Como executar o projeto (localmente)</h1>
 
@@ -18,42 +18,21 @@
 <p>Laravel Framework</p>
 <p>Laravel Jetstream</p>
 
+
 <h1>Instalação</h1>
 
-```html
 1. Clone o repositório
 2. Instale o Laravel na sua máquina com o seguinte comando: "composer global require laravel/installer"
-3. Crie um banco de dados no Mysql com o seguinte comando:
-<pre><code class="language-sql" data-clipboard-text="CREATE TABLE `items` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `description` text DEFAULT NULL,
-  `preco` decimal(10,2) DEFAULT NULL,
-  `image` varchar(255) DEFAULT NULL,
-  `nomedono` varchar(255) DEFAULT NULL,
-  `marca` varchar(255) NOT NULL,
-  `grande` tinyint(1) NOT NULL,
-  `user_id` bigint(20) unsigned NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `items_user_id_foreign` (`user_id`),
-  CONSTRAINT `items_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;">
-CREATE TABLE `items` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `description` text DEFAULT NULL,
-  `preco` decimal(10,2) DEFAULT NULL,
-  `image` varchar(255) DEFAULT NULL,
-  `nomedono` varchar(255) DEFAULT NULL,
-  `marca` varchar(255) NOT NULL,
-  `grande` tinyint(1) NOT NULL,
-  `user_id` bigint(20) unsigned NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `items_user_id_foreign` (`user_id`),
-  CONSTRAINT `items_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-</code></pre>
+3. Na pasta .env, em DB_DATABASE, coloque o nome do seu banco de dados que irá criar no MySQL.
+4. Crie manualmente o banco de dados no MySQL com o nome que você especificou em DB_DATABASE no arquivo .env.
+
+Banco de Dados e Migrations:
+
+O projeto utiliza o sistema de gerenciamento de banco de dados relacional MYSQL para armazenar os dados. As migrations do Laravel são amplamente utilizadas para facilitar a criação e a manutenção da estrutura do banco de dados. As migrations são arquivos de migração que contêm instruções em PHP para criar tabelas, alterar campos e definir índices, permitindo que o banco de dados seja versionado e mantido em sincronia com o código-fonte da aplicação.
+
+Ao executar o projeto, você pode usar o comando "php artisan migrate" para aplicar todas as migrations pendentes e garantir que o banco de dados esteja atualizado de acordo com o código-fonte mais recente.
+
+Caso precise adicionar novas tabelas ou alterar a estrutura do banco de dados, você pode criar novas migrations utilizando o comando "php artisan make:migration". Para mais informações sobre como criar migrations, consulte a documentação oficial do Laravel.
+
+
+
