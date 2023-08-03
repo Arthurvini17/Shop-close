@@ -19,7 +19,7 @@ Composer: O Composer é uma ferramenta essencial para gerenciar as dependências
 MySQL Workbench: Facilita a administração do banco de dados MySQL e pode ser útil para criar um novo Schema.
 
 <h3>Executando o Projeto Localmente</h3>
-1. Clone o Repositório: Faça um clone deste repositório em seu sistema local. https://github.com/Arthurvini17/Shop-close
+1. Clone o Repositório: Faça um clone deste repositório em seu sistema local. https://github.com/Arthurvini17/Shop-close <br>
 2 Crie um Schemma no MYSQL <br>
 3. Configure o Arquivo .env: No diretório do projeto, localize o arquivo .env e configure a variável DB_DATABASE com o nome do Schema que você criou no passo anterior. <br>
 4. Instale as Dependências: Abra o terminal na pasta do projeto e execute o comando composer install para instalar todas as dependências do Laravel. <br>
