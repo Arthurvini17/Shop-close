@@ -24,21 +24,21 @@
 1. Clone o repositório
 2. Instale o Laravel na sua máquina com o seguinte comando: "composer global require laravel/installer"
 3. Na pasta .env em DB_DATABASE coloque o nome do seu banco de dados que irá criar no mysql
-4. Crie um banco de dados no Mysql com o seguinte comando:
-CREATE TABLE `items` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `description` text DEFAULT NULL,
-  `preco` decimal(10,2) DEFAULT NULL,
-  `image` varchar(255) DEFAULT NULL,
-  `nomedono` varchar(255) DEFAULT NULL,
-  `marca` varchar(255) NOT NULL,
-  `grande` tinyint(1) NOT NULL,
-  `user_id` bigint(20) unsigned NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `items_user_id_foreign` (`user_id`),
-  CONSTRAINT `items_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;">
+4. Crie um Schemma no Mysql com o nome que você colocou na pasta .env e crie uma table com o seguinte comando:
+CREATE TABLE `items` ( <br>
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT, <br>
+  `name` varchar(255) NOT NULL, <br>
+  `created_at` timestamp NULL DEFAULT NULL, <br>
+  `updated_at` timestamp NULL DEFAULT NULL, <br> 
+  `description` text DEFAULT NULL, <br> 
+  `preco` decimal(10,2) DEFAULT NULL, <br> 
+  `image` varchar(255) DEFAULT NULL, <br> 
+  `nomedono` varchar(255) DEFAULT NULL, <br> 
+  `marca` varchar(255) NOT NULL, <br> 
+  `grande` tinyint(1) NOT NULL, <br> 
+  `user_id` bigint(20) unsigned NOT NULL, <br> 
+  PRIMARY KEY (`id`), <br> 
+  KEY `items_user_id_foreign` (`user_id`), <br> 
+  CONSTRAINT `items_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) <br> 
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;"> <br>
 
