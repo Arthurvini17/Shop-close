@@ -40,20 +40,4 @@
   KEY `items_user_id_foreign` (`user_id`),
   CONSTRAINT `items_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;">
-CREATE TABLE `items` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
-  `description` text DEFAULT NULL,
-  `preco` decimal(10,2) DEFAULT NULL,
-  `image` varchar(255) DEFAULT NULL,
-  `nomedono` varchar(255) DEFAULT NULL,
-  `marca` varchar(255) NOT NULL,
-  `grande` tinyint(1) NOT NULL,
-  `user_id` bigint(20) unsigned NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `items_user_id_foreign` (`user_id`),
-  CONSTRAINT `items_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 </code></pre>
