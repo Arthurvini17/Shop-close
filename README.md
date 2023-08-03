@@ -20,7 +20,7 @@
 
 <h1>Instalação</h1>
 
-```html
+
 1. Clone o repositório
 2. Instale o Laravel na sua máquina com o seguinte comando: "composer global require laravel/installer"
 3. Crie um banco de dados no Mysql com o seguinte comando:
