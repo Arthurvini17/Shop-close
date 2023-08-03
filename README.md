@@ -9,10 +9,12 @@
 <li>HTML: Linguaguem de marcação </li> <br>
 <li>CSS: Linguaguem de estilização </li> <br>
 
-Pré-requisitos
+<h3>Pré-requisitos</h3>
 Antes de executar o projeto localmente, certifique-se de ter as seguintes ferramentas instaladas em sua máquina:
 
 PHP e MySQL:  caso for windows faça uso do XAMPP, ele oferece uma instalação simples e completa do PHP e do MySQL.
+
+Laravel Framework: instale usando o comando: "composer global require laravel/installer"
 
 Composer: O Composer é uma ferramenta essencial para gerenciar as dependências do Laravel. Certifique-se de tê-lo instalado corretamente.
 
