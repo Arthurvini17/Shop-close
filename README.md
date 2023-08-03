@@ -21,8 +21,8 @@ MySQL Workbench: Facilita a administração do banco de dados MySQL e pode ser �
 <h3>Executando o Projeto Localmente</h3>
 1. Clone o Repositório: Faça um clone deste repositório em seu sistema local. https://github.com/Arthurvini17/Shop-close <br>
 2 Crie um Schemma no MYSQL <br>
-3. Configure o Arquivo .env: No diretório do projeto, localize o arquivo .env e configure a variável DB_DATABASE com o nome do Schema que você criou no passo anterior. <br>
-4. Instale as Dependências: Abra o terminal na pasta do projeto e execute o comando composer install para instalar todas as dependências do Laravel. <br>
+3. Instale as Dependências: Abra o terminal na pasta do projeto e execute o comando composer install para instalar todas as dependências do Laravel. <br>
+4. Configure o Arquivo .env: No diretório do projeto, localize o arquivo .env e configure a variável DB_DATABASE com o nome do Schema que você criou no passo 2. <br>
 5. Execute as Migrações: No terminal, execute o comando php artisan migrate para aplicar as migrações do banco de dados. <br>
 6. Inicie o Servidor: Para executar o projeto, utilize o comando php artisan serve. <br>
 
