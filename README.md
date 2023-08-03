@@ -19,20 +19,5 @@
 <p>Laravel Jetstream</p>
 
 
-<h1>Instalação</h1>
-
-1. Clone o repositório
-2. Instale o Laravel na sua máquina com o seguinte comando: "composer global require laravel/installer"
-3. Na pasta .env, em DB_DATABASE, coloque o nome do seu banco de dados que irá criar no MySQL.
-4. Crie manualmente o banco de dados no MySQL com o nome que você especificou em DB_DATABASE no arquivo .env.
-
-Banco de Dados e Migrations:
-
-O projeto utiliza o sistema de gerenciamento de banco de dados relacional MYSQL para armazenar os dados. As migrations do Laravel são amplamente utilizadas para facilitar a criação e a manutenção da estrutura do banco de dados. As migrations são arquivos de migração que contêm instruções em PHP para criar tabelas, alterar campos e definir índices, permitindo que o banco de dados seja versionado e mantido em sincronia com o código-fonte da aplicação.
-
-Ao executar o projeto, você pode usar o comando "php artisan migrate" para aplicar todas as migrations pendentes e garantir que o banco de dados esteja atualizado de acordo com o código-fonte mais recente.
-
-Caso precise adicionar novas tabelas ou alterar a estrutura do banco de dados, você pode criar novas migrations utilizando o comando "php artisan make:migration". Para mais informações sobre como criar migrations, consulte a documentação oficial do Laravel.
-
 
 
