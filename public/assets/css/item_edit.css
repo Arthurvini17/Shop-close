@@ -46,14 +46,24 @@
     background-color: transparent;
     border-radius: 20px;
     width: 100%;
-   
+    transition: box-shadow ease-in-out 300ms;
 }
 
+.form-container input:focus,
+.form-container input:hover{
+    box-shadow: 5px 1px 5px black;
+}
 .form-container textarea{
     color: black;
     font-weight: 900;
     width: 100%;
     height: 50%;
+    transition: box-shadow ease-in-out 300ms;
+}
+
+.form-container textarea:focus,
+.form-container textarea:hover{
+    box-shadow: 5px 1px 5px black;
 }
 
 .form-container button{

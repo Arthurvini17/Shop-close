@@ -71,12 +71,13 @@ nav a:hover {
   width: 300px;
   transition: all ease-in-out .5s;
   margin-right: -2rem;
- 
+  
+  box-shadow: 0 0 1em #00000013;
 }
 
 .search__input:hover,
 .search__input:focus {
-  box-shadow: 0 0 1em #00000013;
+  box-shadow: 5px 1px 5px black;
 }
 
 .search__input:focus {
