@@ -5,7 +5,7 @@
 <div class="container">
     <div class="itens">
         <div class="search">
-            <form action="/items" method="GET">
+            <form action="/" method="GET">
             <input type="search" class="search__input" placeholder="O que esta procurando?" name="search">
             <button class="search__button">
             </button>
@@ -34,7 +34,7 @@
 
 
             @if (count($items) == 0 && $search)
-                <p>Não há itens disponíveis com essa busca <a href="/items">Ver todos</a></p>
+                <p>Não há itens disponíveis com essa busca <a href="/">Ver todos</a></p>
             @elseif(count($items) == 0)
                 <p>Não há itens disponíveis</p>
             @endif

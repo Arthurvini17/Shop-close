@@ -15,8 +15,8 @@ use App\Http\Controllers\ItemController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/items', [ItemController::class, 'index'])->name('items.index');
+// Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [ItemController::class, 'index'])->name('items.index');
 Route::get('/items/create', [ItemController::class, 'create'])->name('items.create')->middleware('auth');
 Route::post('/items',[ItemController::class,'store'])->name('items.store');
 Route::get('/items/{id}', [ItemController::class,'show'])->name('items.show');
