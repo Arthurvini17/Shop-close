@@ -14,9 +14,9 @@ Antes de executar o projeto localmente, certifique-se de ter as seguintes ferram
 
 PHP e MySQL:  caso for windows faça uso do XAMPP, ele oferece uma instalação simples e completa do PHP e do MySQL.
 
-Laravel Framework: instale usando o comando: "composer global require laravel/installer"
-
 Composer: O Composer é uma ferramenta essencial para gerenciar as dependências do Laravel. Certifique-se de tê-lo instalado corretamente.
+
+Laravel Framework: instale usando o comando: "composer global require laravel/installer"
 
 MySQL Workbench: Facilita a administração do banco de dados MySQL e pode ser útil para criar um novo Schema.
 
