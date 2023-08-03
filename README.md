@@ -23,7 +23,8 @@
 
 1. Clone o repositório
 2. Instale o Laravel na sua máquina com o seguinte comando: "composer global require laravel/installer"
-3. Crie um banco de dados no Mysql com o seguinte comando:
+3. Na pasta .env em DB_DATABASE coloque o nome do seu banco de dados que irá criar no mysql
+4. Crie um banco de dados no Mysql com o seguinte comando:
 CREATE TABLE `items` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
