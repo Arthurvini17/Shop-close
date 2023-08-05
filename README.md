@@ -37,7 +37,7 @@ MySQL Workbench: Facilita a administração do banco de dados MySQL e pode ser �
 <h3> Pagina anunciar item <h3>
 <img src="resources/img/imagens-git/page create.png">
 
-<h3> Itens que Você criou <h3>
+<h3> Itens que você criou <h3>
 <img src="resources/img/imagens-git/dashboard.png">
 
 <h3> Pagina editar item <h3>
