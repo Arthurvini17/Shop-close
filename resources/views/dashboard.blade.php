@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{{ asset('assets/css/dashboard.css') }}">
 @section('content')
 
-    <h1>Dashboard</h1>
+    <h1>Seus itens</h1>
 
     @if (isset($items) && count($items) > 0)
 

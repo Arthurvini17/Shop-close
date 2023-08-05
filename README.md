@@ -31,4 +31,15 @@ MySQL Workbench: Facilita a administração do banco de dados MySQL e pode ser �
 
 
 <h1> Imagens do projeto</h1>
+<h3> Pagina inicial logado <h3>
 <img src="resources/img/imagens-git/page home.png">
+
+<h3> Pagina anunciar item <h3>
+<img src="resources/img/imagens-git/page create.png>
+
+<h3> Itens que Você criou <h3>
+<img src="resources/img/imagens-git/dashboard.png>
+
+<h3> Pagina inicial caso não tiver logado com sua conta </h3>
+
+<img src="resources/img/imagens-git/page home-guest.png>
